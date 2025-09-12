@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ippe.Akshaya - Portfolio</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+      color: #222;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #1f2937;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .profile-pic-header {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1.2rem;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      background: white;
+      margin: 2rem auto;
+      padding: 2.5rem;
+      border-radius: 8px;
+      max-width: 900px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 1.7rem;
+      color: #1f2937;
+    }
+
+    h3 {
+      margin: 0.5rem 0;
+      font-weight: normal;
+      color: #444;
+    }
+
+    ul {
+      list-style: square inside;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #1f2937;
+      color: white;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    a {
+      color: #1f2937;
+    }
+
+    #backToTop {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #1f2937;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+    #backToTop:hover {
+      background: #374151;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with larger picture -->
+  <header>
+    <div class="header-left">
+      <img src="saiport.jpg" alt="Profile Photo" class="profile-pic-header"/>
+      <h1>Ippe.Akshaya</h1>
+    </div>
+    <nav>
+      <a href="#page1">About</a>
+      <a href="#page2">Achievements</a>
+      <a href="#page2">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Page 1: About + Skills -->
+  <section id="page1" class="section">
+    <h2>About Me</h2>
+    <h3>3rd Year B.Tech CSE — KKR & KSR Institute of Technology and Sciences</h3>
+    <p>
+      I am a motivated and passionate Computer Science Engineering student with strong technical knowledge and excellent communication skills. 
+      My academic journey has given me a strong foundation in programming languages such as <strong>Python</strong> and <strong>Java</strong>, 
+      and I constantly seek opportunities to apply this knowledge in practical and impactful ways.
+    </p>
+    <p>
+      As a student, I believe in teamwork, creativity, and problem-solving. I enjoy collaborating with peers to build innovative solutions, 
+      which is reflected in my hackathon experiences. I am curious, adaptable, and always eager to learn new skills that prepare me for real-world challenges.
+    </p>
+    <p>
+      Outside academics, I am confident in my ability to communicate effectively, making me a strong team player who can both lead and support a group 
+      towards achieving a shared goal.
+    </p>
+
+    <h2>Skills</h2>
+    <ul>
+      <li>Python</li>
+      <li>Java</li>
+      <li>Communication & Teamwork</li>
+      <li>Web Development Basics</li>
+    </ul>
+  </section>
+
+  <!-- Page 2: Achievements + Contact -->
+  <section id="page2" class="section">
+    <h2>Achievements</h2>
+    <ul>
+      <li>✔ Won <strong>2 Hackathons</strong> at KKR & KSR Institute of Technology and Sciences.</li>
+      <li>Hackathon Projects: <strong>Skill Exchange Website</strong> & <strong>Bus Tracking System</strong>.</li>
+      <li>Completed Internship at <strong>Blackbucks</strong>, gaining valuable industry experience.</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p><strong>Phone:</strong> 6304747728</p>
+    <p><strong>Email:</strong> <a href="mailto:akshaya.ippe55@gmail.com">akshaya.ippe55@gmail.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/akshaya-ippe-620947306" target="_blank">"https://www.linkedin.com/in/akshaya-ippe-620947306"</a></p>
+    <p><strong>GitHub:</strong> <a href="#" target="_blank">github.com/ippe-akshaya</a></p>
+  </section>
+
+  <footer>
+    <p>© <span id="year"></span> Ippe.Akshaya — Portfolio</p>
+  </footer>
+
+  <button id="backToTop">↑ Top</button>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const backToTopBtn = document.getElementById("backToTop");
+    window.onscroll = function() {
+      if (document.documentElement.scrollTop > 200) {
+        backToTopBtn.style.display = "block";
+      } else {
+        backToTopBtn.style.display = "none";
+      }
+    };
+    backToTopBtn.addEventListener("click", function() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
+ 
